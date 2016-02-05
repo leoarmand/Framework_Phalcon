@@ -41,10 +41,10 @@
 
     $result = $connection->query("SELECT * FROM joueur");
     $result->setFetchMode(Phalcon\Db::FETCH_NUM);
-    echo "<table class='table'><th>Flag</th><th>Prénom</th><th>Nom</th><th>Code Pays</th>";
+    echo "<table class='table'><th>Flag</th><th>Nom</th><th>Prénom</th><th>Code Pays</th>";
     while($joueur = $result->fetch()){
-        echo "<tr><td class='flag'></td><td>$joueur[1]</td><";
-        echo "<td>$joueur[2]</td>";
+        echo "<tr><td class='flag'></td><td>$joueur[2]</td>";
+        echo "<td>$joueur[1]</td>";
         echo "<td>$joueur[3]</td></tr>";
     }
     echo "</table>";
